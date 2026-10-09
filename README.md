@@ -1,10 +1,22 @@
 # Foggy Glass
 
-A browser-based interactive creative coding experiment by Michelle Guan.
+> An atmospheric surface that responds like condensation on glass.
 
-## Live demo
+[**View live demo →**](https://michmich02.github.io/foggy-glass/)
 
-https://michmich02.github.io/foggy-glass/
+## Overview
+
+Foggy Glass turns the browser into a tactile, misted window. Real-time hand input clears and disturbs the surface, revealing the scene underneath through a soft WebGL effect.
+
+## Interaction
+
+- Allow camera access.
+- Hold one hand in view.
+- Move across the frame to clear and reshape the fog.
+
+## Built with
+
+`JavaScript` · `Three.js` · `WebGL` · `MediaPipe`
 
 ## Run locally
 
@@ -12,14 +24,10 @@ https://michmich02.github.io/foggy-glass/
 python3 -m http.server 8000 --directory docs
 ```
 
-Open http://localhost:8000. Camera access requires localhost or HTTPS. Use a desktop browser and good lighting; allow camera or microphone access when the experience asks for it. External models and CDN scripts require internet access.
+Open [http://localhost:8000](http://localhost:8000) in a desktop browser. Camera and microphone APIs require localhost or HTTPS; external models and CDN dependencies require an internet connection.
 
-## Files
+## Design notes
 
-The root contains the project source. `docs/` contains the prepared static demo.
-
-## Publishing
-
-Enable GitHub Pages with **Deploy from a branch**, branch **main**, folder **/docs**.
-
-Camera, microphone and gesture behavior should be verified on the target device.
+- Immediate visual feedback keeps the gesture-to-effect relationship legible.
+- The experience is designed as a focused, full-screen interaction.
+- Processing happens in the browser; camera and microphone streams are not uploaded by this project.
